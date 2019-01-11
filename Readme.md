@@ -141,3 +141,30 @@ la parte b de la tarea
 
 **-Modificar un bugs:  Operación PUT /bugs**
 **curl -i -X PUT -H "Content-Type:application/json" -d '{"descripcion":"fallo de video"} http://localhost:8080/bugs/1**
+
+
+**-Obtener todos los bugs: Operación GET /bugs**
+Parámetros de entrada: NONE
+        Salida:  (Json)                  Lista de  {<bugs>}
+        Ejemplo:
+**curl -i -X GET http://localhost:8080/bugs**
+**-Obtener los datos de un usuario: Operación GET /usuari/{id usuar}**
+Parámetros de entrada: NONE
+ Salida:    (Json)               http://localhost:8080/bugs/{id bugs}
+ Ejemplo:
+ **curl -i -X GET http://localhost:8080/bugs/1**
+ **- Modificar un atributo de un usuario: Operación PATCH /usuari**
+ 	    Parámetros de entrada (Json)    String  videojoc;
+                                            String  usuari;
+                                            String  data_de_Bug;
+                                            String  plataforma;
+                                            String  email;
+                                            String  descripcion_breu;
+                                            String  descripcion;
+                                            String  categoria;
+                                            String  prioritat;
+                                            String  estat;
+                                         {id bugs}
+ 	    Salida:    (Json)               http://localhost:8080/usuari/{id bugs}
+         Ejemplo:
+         **curl -i -X PATCH -H "Content-Type:application/json" -d '{"videojoc": "maddog2" }' http://localhost:8080/bugs/1**
