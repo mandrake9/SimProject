@@ -123,6 +123,7 @@ https://dzone.com/tutorials/java/hibernate/hibernate-example/hibernate-mapping-m
 
 
 la parte b de la tarea
+creamos la entidad bugs y creamos un repositorio como el de usuario para el 
 **-Alta de un bugs: Operación POST /bugs**
 
      String  videojoc;
