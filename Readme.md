@@ -1,8 +1,8 @@
 # Serveis i Multimedia SIM - Project Mòdul AOS 
 
+los participantes :jun y nataly
 
-
-El cas pràctic consisteix en l'anàlisi, disseny i desenvolupament d'un servei web ReST que s'utilitzarà per a registrar l’usuari i un bug del test d'un joc. Les operacions necessàries seran: 1). Donar d’alta d'un nou usuari en la plataforma. Les dades necessàries seran Nom, cognom, data de naixement i correu electrònic (obligatoris), país naixement, país de residència i adreça (opcional). L'operació retornarà la identificació de l'usuari. 
+En este proyecto hemos probado el parte a y despues hemos ejecutado y probado la parte b del practica
 
 This application have
 * Usuari application serves from
@@ -33,8 +33,10 @@ a crear la tabla y se penderan los datos.
     Run Aplication
     
 ##Operaciones disponibles
+parte a
 
-**-Alta de un usuari: Operación POST /usuari**		
+**-Alta de un usuari: Operación POST /usuari**
+En este parte se crea los datos en en el base de datos
 	    Parámetros de entrada (Json)    String  CodUsuari;
                                         String  nom;
                                         String  cognoms;
@@ -49,7 +51,8 @@ a crear la tabla y se penderan los datos.
 	     curl -i -X POST -H "Content-Type:application/json" -d '{"codUsuari": "nico", "nom": "nico","cognoms":"Hernández","email":"nico"}' http://localhost:8080/usuari
          curl -i -X POST -H "Content-Type:application/json" -d '{"codUsuari": "kyla", "nom": "kyla","cognoms":"Hernández","dataNaixement":"2017-10-10"}' http://localhost:8080/usuari**
 
-**-Modificar un usuari:  Operación PUT /usuari** 	
+**-Modificar un usuari:  Operación PUT /usuari**
+En esta apartado se enseña como se modifica los datos de un usuario
 	    Parámetros de entrada (Json)    String  CodUsuari;
                                         String  nom;
                                         String  cognoms;
@@ -119,3 +122,22 @@ https://www.callicoder.com/hibernate-spring-boot-jpa-one-to-many-mapping-example
 https://dzone.com/tutorials/java/hibernate/hibernate-example/hibernate-mapping-many-to-one-using-annotations-1.html
 
 
+la parte b de la tarea
+**-Alta de un bugs: Operación POST /bugs**
+
+     String  videojoc;
+     String  usuari;
+     String  data_de_Bug;
+     String  plataforma;
+     String  email;
+     String  descripcion_breu;
+     String  descripcion;
+     String  categoria;
+     String  prioritat;
+     String  estat;
+ **curl -i -X POST -H "Content-Type:application/json" -d '{"videojoc": "stella", "usuari": "kyla","data_de_Bug":"12-12-12","plataforma":"steam","email":"juan@mail.com","descripcion":"fallo de sonido"}' http://localhost:8080/bugs
+        curl -i -X POST -H "Content-Type:application/json" -d '{"videojoc": "maddog", "usuari": "kira","data_de_Bug":"13-12-12","plataforma":"steam","email":"madh@mail.com","descripcion":"fallo de sonido"}' http://localhost:8080/bugs
+        curl -i -X POST -H "Content-Type:application/json" -d '{"videojoc": "maddog", "usuari": "juan","data_de_Bug":"13-12-12","plataforma":"steam","email":"alash@mail.com","descripcion":"fallo de video"}' http://localhost:8080/bugs**
+
+**-Modificar un bugs:  Operación PUT /bugs**
+**curl -i -X PUT -H "Content-Type:application/json" -d '{"descripcion":"fallo de video"} http://localhost:8080/bugs/1**
