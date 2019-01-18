@@ -180,15 +180,11 @@ Parámetros de entrada: NONE
 	    Salida:    (Json)               Json http://localhost:808/bugs/{id bugs}
         Ejemplo: **curl -i -X GET  http://localhost:8080/bugs/search/findByEmail?email=alash@mail.com**
 
-**- Eliminar por email:   GET  /search/deleteByEmail**	
-        Parámetros de Entrada    String email 	
+**- Eliminar por email:   GET  /search/deleteByUsuari**	
+        Parámetros de Entrada    String usuari 	
 	    Salida:     
-        Ejemplo: **curl -i -X GET  http://localhost:8080/bugs/search/deleteByEmail?email=
-**- Eliminar por email:   GET  /search/deleteByEmail**	
-        Parámetros de Entrada    String email 	
-	    Salida:     
-        Ejemplo: **curl -i -X GET  http://localhost:8080/bugs/search/deleteByEmail?email=alash@mail.com**
-	
+        Ejemplo: **curl -i -X GET  http://localhost:8080/bugs/search/deleteByUsuari?usuari=juan**
+
 **- Eliminar por id: Operación DELETE /bugs/{id bugs}** 	
         Parametros de Entrada    NONE 	
 	    Salida:     
