@@ -169,3 +169,27 @@ Parámetros de entrada: NONE
  	    Salida:    (Json)               http://localhost:8080/usuari/{id bugs}
          Ejemplo:
          **curl -i -X PATCH -H "Content-Type:application/json" -d '{"videojoc": "maddog2" }' http://localhost:8080/bugs/1**
+	
+**- Buscar functiones disponibles: Operación GET /bugs/search**
+
+ Ejemplo: 
+        **curl -i -X GET http://localhost:8080/bugs/search**
+	
+**- Encontrar por email: Operación  GET /search/findByEmail** 
+  Parámtros de Entrada    String email 	
+	    Salida:    (Json)               Json http://localhost:808/bugs/{id bugs}
+        Ejemplo: **curl -i -X GET  http://localhost:8080/bugs/search/findByEmail?email=alash@mail.com**
+
+**- Eliminar por email:   GET  /search/deleteByEmail**	
+        Parámetros de Entrada    String email 	
+	    Salida:     
+        Ejemplo: **curl -i -X GET  http://localhost:8080/bugs/search/deleteByEmail?email=
+**- Eliminar por email:   GET  /search/deleteByEmail**	
+        Parámetros de Entrada    String email 	
+	    Salida:     
+        Ejemplo: **curl -i -X GET  http://localhost:8080/bugs/search/deleteByEmail?email=alash@mail.com**
+	
+**- Eliminar por id: Operación DELETE /bugs/{id bugs}** 	
+        Parametros de Entrada    NONE 	
+	    Salida:     
+        Ejemplo: **curl -i -X DELETE  http://localhost:8080/bugs/1**
